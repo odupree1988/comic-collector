@@ -9,7 +9,7 @@ function fetchCharacter(charName){
         appid: apiKey,
         name: charName,
         hash: md5,
-        ts: 1,
+        ts: str(time.time()),
 })
 fetch(char_URL + queryParams)
 .then((response)=>response.json())
@@ -23,7 +23,7 @@ fetch(char_URL + queryParams)
     appid: apiKey,
     character: charId,
     hash: md5,
-    ts:1,
+    ts: str(time.time()),
   });
   fetch(comic_URL + queryParams)
     .then((response) => response.json())
@@ -38,7 +38,7 @@ fetch(char_URL + queryParams)
     appid: apiKey,
     title: comic,
     hash: md5,
-    ts: 1,
+    ts: str(time.time()),
   });
   fetch(comic_URL + queryParams)
     .then((response) => response.json())
