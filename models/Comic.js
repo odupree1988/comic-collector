@@ -14,10 +14,12 @@ Comic.init(
     super_hero: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true,
     },
     book_name: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true,
     },
     user_id: {
       type: DataTypes.INTEGER,

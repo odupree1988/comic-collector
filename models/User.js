@@ -1,7 +1,6 @@
 const { Model, DataTypes } = require("sequelize");
 const bcrypt = require("bcrypt");
 const sequelize = require("../config/connection");
-const { update } = require("./Comic");
 
 class User extends Model {
   checkPassword(loginPw) {
@@ -53,6 +52,7 @@ User.init(
       },
     },
     sequelize,
+    timestamps: false,
     freezeTableName: true,
     underscored: true,
     modelName: "user",
