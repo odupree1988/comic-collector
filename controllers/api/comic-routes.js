@@ -33,8 +33,7 @@ router.post("/", (req, res) => {
   Comic.create({
     super_hero: req.body.super_hero,
     book_name: req.body.book_name,
-    //requires req.session.user_id
-    user_id: req.body.user_id,
+    user_id: req.session.user_id,
   })
     .then((dbComicData) => res.json(dbComicData))
     .catch((err) => {
