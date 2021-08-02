@@ -16,12 +16,12 @@ router.get("/", (req, res) => {
   axios
     .get(`${char_URL}${auth}&name=${character}`)
     .then(({ data }) => {
-      // console.log(JSON.stringify(data, null, 2))
+      console.log(JSON.stringify(data, null, 2))
       let charId = data.data.results[0].id;
       axios
         .get(`${comic_URL}${auth}&characters=${charId}`)
         .then(({ data }) => {
-          // console.log(JSON.stringify(data, null, 2))
+          console.log(JSON.stringify(data, null, 2))
 
           return res.json(data);
         })

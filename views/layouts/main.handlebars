@@ -14,7 +14,7 @@
   <body>
 
     <nav
-      class="navbar navbar-expand-lg navbar-light bg-info bg-gradient"
+      class="navbar navbar-expand-lg navbar-light bg-info bg-gradient sticky-top"
       {{! style="height: 200px; background-image: url('IMG/Marvel_Logo.svg');" }}
     >
 
@@ -57,10 +57,15 @@
           <input
             class="text-center form-control mr-sm-2"
             type="search"
+            id="input"
             placeholder="SEARCH"
             aria-label="Search"
           />
-          <button class="rounded btn my-2 my-sm-0 bg-light" type="submit">
+          <button
+            class="rounded btn my-2 my-sm-0 bg-light"
+            id="srchbtn"
+            type="submit"
+          >
             SEARCH
           </button>
         </form>
@@ -85,6 +90,7 @@
     <main>
       {{{body}}}
     </main>
+    <script src="/javascript/script-api.js"></script>
   </body>
 </html>
 
@@ -132,6 +138,5 @@
     <main>
       {{{body}}}
     </main>
-    <script src="/javascript/script-api.js"></script>
   </body>
 </html> --}}
