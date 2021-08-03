@@ -114,10 +114,12 @@
               mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis
               dis parturient montes, nascetur ridiculus mus.</p>
           </div>
-          <div class="col text-center mt-4">
-            <button type="submit" class="btn btn-primary">Add to Collection</button>
-            <button type="submit" class="btn btn-primary">Add to Wish List</button>
-          </div>
+          {{#if loggedIn}}
+            <div class="col text-center mt-4">
+              <button type="submit" class="btn btn-primary">Add to Collection</button>
+              <button type="submit" class="btn btn-primary">Add to Wish List</button>
+            </div>
+          {{/if}}
         </div>
       </div>
     </div>
@@ -155,10 +157,12 @@
               mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis
               dis parturient montes, nascetur ridiculus mus.</p>
           </div>
-          <div class="col text-center mt-4">
-            <button type="submit" class="btn btn-primary">Add to Collection</button>
-            <button type="submit" class="btn btn-primary">Add to Wish List</button>
-          </div>
+          {{#if loggedIn}}
+            <div class="col text-center mt-4">
+              <button type="submit" class="btn btn-primary">Add to Collection</button>
+              <button type="submit" class="btn btn-primary">Add to Wish List</button>
+            </div>
+          {{/if}}
         </div>
       </div>
     </div>
