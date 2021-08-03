@@ -24,7 +24,9 @@
       </div>
       <div
         class="col-sm col-md col-lg col-xl col-xxl p-2 rounded"
-        style="background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 50%,rgba(255,255,255,0.9) 150%), url(IMG/split.jpg)"
+        style="background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 50%,rgba(255,255,255,0.9) 150%), url(IMG/split.jpg); 
+        background-size: cover; 
+        background-position: center;"
       >
         {{! style="background-image: url('IMG/lightning.jpg')"> }}
         <h2 class="text-center">Sign up today!</h2>
@@ -55,10 +57,7 @@
             />
           </div>
           <div class="mb-2">
-            <label
-              for="password-form"
-              class="form-label"
-            >Password:</label>
+            <label for="password-form" class="form-label">Password:</label>
             <input
               type="password"
               class="form-control"
@@ -79,7 +78,89 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container mt-3">
+  <div class="row">
+    <div
+      class="col-sm col-md col-lg col-xl col-xxl border-top border-right border-bottom pl-0"
+      style="background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 50%,rgba(255,255,255,0.9) 150%), url(IMG/wham.jpg); 
+        background-size: cover; 
+        background-position: center;"
+    >
+      <div class="media">
+        <img
+          class="align-self-center mr-3"
+          src="IMG/sidebar-placeholder.png"
+          alt="Generic placeholder image"
+        />
+        <div
+          class="media-body align-self-center font-weight-light"
+          style="font-size: 1.2rem;"
+        >
+          <div class="border-top border-bottom">
+
+            <h5 class="mt-0">Center-aligned media</h5>
+            <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+              scelerisque ante sollicitudin. Cras purus odio, vestibulum in
+              vulputate at, tempus viverra turpis. Fusce condimentum nunc ac
+              nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+          </div>
+          <div class="border-top border-bottom">
+            <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna
+              mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis
+              dis parturient montes, nascetur ridiculus mus.</p>
+          </div>
+          <div class="col text-center mt-4">
+            <button type="submit" class="btn btn-primary">Add to Collection</button>
+            <button type="submit" class="btn btn-primary">Add to Wish List</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-3">
+  <div class="row">
+    <div
+      class="col-sm col-md col-lg col-xl col-xxl border-top border-right border-bottom pl-0"
+      style="background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 50%,rgba(255,255,255,0.9) 150%), url(IMG/wham.jpg); 
+        background-size: cover; 
+        background-position: center;"
+    >
+      <div class="media">
+        <img
+          class="align-self-center mr-3"
+          src="IMG/sidebar-placeholder.png"
+          alt="Generic placeholder image"
+        />
+        <div
+          class="media-body align-self-center font-weight-light"
+          style="font-size: 1.2rem;"
+        >
+          <div class="border-top border-bottom">
+
+            <h5 class="mt-0">Center-aligned media</h5>
+            <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+              scelerisque ante sollicitudin. Cras purus odio, vestibulum in
+              vulputate at, tempus viverra turpis. Fusce condimentum nunc ac
+              nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+          </div>
+          <div class="border-top border-bottom">
+            <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna
+              mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis
+              dis parturient montes, nascetur ridiculus mus.</p>
+          </div>
+          <div class="col text-center mt-4">
+            <button type="submit" class="btn btn-primary">Add to Collection</button>
+            <button type="submit" class="btn btn-primary">Add to Wish List</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{! <div class="container">
   <div class="row">
     <div class="col-sm col-md col-lg col-xl col-xxl">
       <div class="card" style="width: 18rem;">
@@ -104,7 +185,7 @@
       </ul>
     </div>
   </div>
-</div>
+</div> }}
 {{! <h1>Comic Search</h1>
 <div class="topnav">
   <input type="text" placeholder="Search.." id="input">
