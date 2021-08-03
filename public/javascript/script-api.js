@@ -1,10 +1,9 @@
 let userInput = document.getElementById("input");
 let srchbtn = document.getElementById("srchbtn");
 
-srchbtn.addEventListener("submit", function (event) {
-  if(document.querySelectorAll("#search").value ===1){
-
-    event.preventDefault();
+srchbtn.addEventListener("click", function (event) {
+  event.preventDefault();
+  if(document.querySelectorAll("#search").value =="comic"){
     let character = userInput.value;
     character = character.replace(/\s+/g,"-")
     console.log(character);
