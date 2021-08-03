@@ -169,7 +169,9 @@
   </div>
 </div>
 
-<script src="/javascript/signup.js"></script>
+{{#unless loggedIn}}
+  <script src="/javascript/signup.js"></script>
+{{/unless}}
 
 {{! <div class="container">
   <div class="row">
