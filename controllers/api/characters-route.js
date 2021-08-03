@@ -24,7 +24,7 @@ console.log(character)
       axios
         .get(`${comic_URL}${auth}&characters=${charId}`)
         .then(({ data }) => {
-          // console.log(JSON.stringify(data, null, 2))
+          console.log(JSON.stringify(data, null, 2))
 
           return res.json(data);
         })
