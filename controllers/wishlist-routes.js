@@ -3,7 +3,10 @@ const sequelize = require("../config/connection");
 const { User, Comic } = require("../models");
 
 router.get("/", (req, res) => {
-  res.render("wishlist", { search: true });
+  res.render("wishlist", {
+    search: true,
+    loggedIn: req.session.loggedIn,
+  });
 });
 
 module.exports = router;

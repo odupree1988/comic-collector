@@ -31,37 +31,31 @@
         {{! style="background-image: url('IMG/lightning.jpg')"> }}
         <h2 class="text-center">Sign up today!</h2>
         <h4 class="text-center font-bold">fill out the form to create an account</h4>
-        <form>
+        <form class="signup-form">
           <div class="mb-3">
-            <label
-              for="formGroupExampleInput"
-              class="form-label"
-            >Username:</label>
+            <label for="username-signup" class="form-label">Username:</label>
             <input
               type="text"
               class="form-control"
-              id="formGroupExampleInput"
+              id="username-signup"
               placeholder="Stan Lee"
             />
           </div>
           <div class="mb-3">
-            <label
-              for="formGroupExampleInput2"
-              class="form-label"
-            >Email:</label>
+            <label for="email-signup" class="form-label">Email:</label>
             <input
               type="email"
               class="form-control"
-              id="formGroupExampleInput2"
+              id="email-signup"
               placeholder="email@address.com"
             />
           </div>
           <div class="mb-2">
-            <label for="password-form" class="form-label">Password:</label>
+            <label for="password-signup" class="form-label">Password:</label>
             <input
               type="password"
               class="form-control"
-              id="password-form"
+              id="password-signup"
               placeholder="Password"
             />
           </div>
@@ -160,6 +154,8 @@
   </div>
 </div>
 
+<script src="/javascript/signup.js"></script>
+
 {{! <div class="container">
   <div class="row">
     <div class="col-sm col-md col-lg col-xl col-xxl">
@@ -243,7 +239,8 @@
   </div>
 </section>
 <div class="div clr"></div>
+ }}
+{{! 
 <footer id="main-footer">
   <p>Comic-collector &copy; 2021 all rights reserved</p>
-</footer>
- }}
+</footer> }}

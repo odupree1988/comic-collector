@@ -50,15 +50,17 @@
           <li class="nav-item">
             <a class="nav-link" href="/wishlist">WISH LIST</a>
           </li>
-          {{!-- {{#if loggedIn}} --}}
-          <button class="nav-item nav-link btn" id="logout">
-            LOG OUT
-          </button>
-          {{!-- {{else}} --}}
-          <li class="nav-item">
-            <a class="nav-link" href="/login">LOG IN</a>
-          </li>
-          {{!-- {{/if}} --}}
+          {{#if loggedIn}}
+            <li class="nav-item">
+              <button class="nav-link btn" id="logout">
+                LOG OUT
+              </button>
+            </li>
+          {{else}}
+            <li class="nav-item">
+              <a class="nav-link" href="/login">LOG IN</a>
+            </li>
+          {{/if}}
         </ul>
         {{#unless search}}
           <form class="form-inline my-2 my-lg-0">
@@ -87,7 +89,6 @@
         {{/unless}}
       </div>
     </nav>
-
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -107,7 +108,9 @@
       {{{body}}}
     </main>
     <script src="/javascript/script-api.js"></script>
-    <script src="/javascript/logout.js"></script>
+    {{#if loggedIn}}
+      <script src="/javascript/logout.js"></script>
+    {{/if}}
   </body>
 </html>
 

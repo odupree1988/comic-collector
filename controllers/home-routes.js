@@ -13,10 +13,18 @@ router.get("/", (req, res) => {
 });
 
 router.get("/signup", (req, res) => {
-  res.render("signup", { search: true });
+  res.render("signup", {
+    search: true,
+    loggedIn: req.session.loggedIn,
+  });
 });
 
 router.get("/login", (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  }
+
   res.render("login", { search: true });
 });
 
