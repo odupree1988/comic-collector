@@ -5,7 +5,8 @@ async function logout() {
   });
 
   if (response.ok) {
-    doncument.location.replace("/");
+    // doncument.location.replace("/");
+    console.log("success!")
   } else {
     alert(response.statusText);
   }

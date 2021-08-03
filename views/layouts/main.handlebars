@@ -43,15 +43,15 @@
           <li class="nav-item">
             <a class="nav-link" href="/dashboard/wishlist">WISH LIST</a>
           </li>
-          {{#if loggedIn}}
-            <button class="nav-item nav-link btn">
+          {{!-- {{#if loggedIn}} --}}
+            <button class="nav-item nav-link btn" id="logout">
               LOG OUT
             </button>
-          {{else}}
+          {{!-- {{else}} --}}
             <li class="nav-item">
               <a class="nav-link" href="/login">LOG IN</a>
             </li>
-          {{/if}}
+          {{!-- {{/if}} --}}
         </ul>
         <form class="form-inline my-2 my-lg-0">
           <input
@@ -91,6 +91,7 @@
       {{{body}}}
     </main>
     <script src="/javascript/script-api.js"></script>
+    <script src="/javascript/logout.js"></script>
   </body>
 </html>
 
