@@ -7,6 +7,7 @@ router.get("/", (req, res) => {
     const posts = dbPostData.map((post) => post.get({ plain: true }));
     res.render("homepage", {
       posts,
+      homepage: false,
       loggedIn: req.session.loggedIn,
     });
   });
@@ -14,6 +15,7 @@ router.get("/", (req, res) => {
 
 router.get("/signup", (req, res) => {
   res.render("signup", {
+    homepage: true, 
     search: true,
     loggedIn: req.session.loggedIn,
   });
@@ -25,7 +27,10 @@ router.get("/login", (req, res) => {
     return;
   }
 
-  res.render("login", { search: true });
+  res.render("login", { 
+    homepage: true, 
+    search: true 
+  });
 });
 
 module.exports = router;

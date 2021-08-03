@@ -44,12 +44,14 @@
             <a class="nav-link" href="/">HOME
               <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/dashboard">MY COLLECTION</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/wishlist">WISH LIST</a>
-          </li>
+          {{#if loggedIn}}
+            <li class="nav-item">
+              <a class="nav-link" href="/dashboard">MY COLLECTION</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/wishlist">WISH LIST</a>
+            </li>
+          {{/if}}
           {{#if loggedIn}}
             <li class="nav-item">
               <button class="nav-link btn" id="logout">
@@ -89,6 +91,10 @@
         {{/unless}}
       </div>
     </nav>
+
+    <main>
+      {{{body}}}
+    </main>
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -104,14 +110,16 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
-    <main>
-      {{{body}}}
-    </main>
-    <script src="/javascript/script-api.js"></script>
+    {{#unless homepage}}
+      <script src="/javascript/script-api.js"></script>
+    {{/unless}}
     {{#if loggedIn}}
       <script src="/javascript/logout.js"></script>
     {{/if}}
   </body>
+  {{! <footer id="main-footer">
+    <p>Comic-collector &copy; 2021 all rights reserved</p>
+  </footer> }}
 </html>
 
 {{!-- <html lang="en">

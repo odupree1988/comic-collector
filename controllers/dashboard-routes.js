@@ -4,6 +4,7 @@ const { User, Comic } = require("../models");
 
 router.get("/", (req, res) => {
   res.render("collection", {
+    homepage: true,
     search: true,
     loggedIn: req.session.loggedIn,
   });
