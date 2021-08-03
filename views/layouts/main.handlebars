@@ -60,29 +60,31 @@
           </li>
           {{!-- {{/if}} --}}
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <div class="input-group">
-            <select class="custom-select" id="inputGroupSelect02">
-              <option class="bg-primary" value="1" selected>SEARCH BY COMIC</option>
-              <option value="2">SEARCH BY HERO</option>
-            </select>
-          </div>
-          <input
-            class="text-center form-control mr-sm-2"
-            type="search"
-            id="input"
-            placeholder="SEARCH"
-            aria-label="Search"
-          />
+        {{#unless search}}
+          <form class="form-inline my-2 my-lg-0">
+            <div class="input-group">
+              <select class="custom-select" id="inputGroupSelect02">
+                <option class="bg-primary" value="1" selected>SEARCH BY COMIC</option>
+                <option value="2">SEARCH BY HERO</option>
+              </select>
+            </div>
+            <input
+              class="text-center form-control mr-sm-2"
+              type="search"
+              id="input"
+              placeholder="SEARCH"
+              aria-label="Search"
+            />
 
-          <button
-            class="rounded btn my-2 my-sm-0 bg-light"
-            id="srchbtn"
-            type="submit"
-          >
-            SEARCH
-          </button>
-        </form>
+            <button
+              class="rounded btn my-2 my-sm-0 bg-light"
+              id="srchbtn"
+              type="submit"
+            >
+              SEARCH
+            </button>
+          </form>
+        {{/unless}}
       </div>
     </nav>
 
