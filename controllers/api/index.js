@@ -7,5 +7,6 @@ const character = require("./characters-route.js")
 router.use("/users", userRoutes);
 router.use("/comics", comicRoutes);
 router.use("/characters",character)
+router.use("comicName",comicName)
 
 module.exports = router;
