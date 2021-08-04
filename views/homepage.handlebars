@@ -93,8 +93,9 @@
     >
       {{!-- <div class="media">
         <img
+          id="comicImg"
           class="align-self-center mr-3"
-          src="IMG/sidebar-placeholder.png"
+          {{!-- src="IMG/sidebar-placeholder.png" --}}
           alt="Generic placeholder image"
           id="comic-image"
         />
@@ -104,16 +105,20 @@
         >
           <div class="border-top border-bottom">
 
-            <h5 class="mt-0">Center-aligned media</h5>
-            <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
-              scelerisque ante sollicitudin. Cras purus odio, vestibulum in
-              vulputate at, tempus viverra turpis. Fusce condimentum nunc ac
-              nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+            <h5 id="titleElem" class="mt-0"></h5>
+            <ul>
+              <li id="priceElem"></li>
+              <li>
+                <a id="urlElem" href=""></a>
+              </li>
+            </ul>
           </div>
           <div class="border-top border-bottom">
-            <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna
-              mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis
-              dis parturient montes, nascetur ridiculus mus.</p>
+            <ul class="mb-0">
+              <li id="descElem">
+              
+              </li>
+            </ul>
           </div>
           {{#if loggedIn}}
             <div class="col text-center mt-4">
@@ -146,7 +151,7 @@
       <div class="media">
         <img
           class="align-self-center mr-3"
-          src="IMG/sidebar-placeholder.png"
+          {{!-- src="IMG/sidebar-placeholder.png" --}}
           alt="Generic placeholder image"
           
         />
