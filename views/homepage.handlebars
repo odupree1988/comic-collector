@@ -96,6 +96,7 @@
           class="align-self-center mr-3"
           src="IMG/sidebar-placeholder.png"
           alt="Generic placeholder image"
+          id="comic-image"
         />
         <div
           class="media-body align-self-center font-weight-light"
@@ -116,8 +117,16 @@
           </div>
           {{#if loggedIn}}
             <div class="col text-center mt-4">
-              <button type="submit" class="btn btn-primary">Add to Collection</button>
-              <button type="submit" class="btn btn-primary">Add to Wish List</button>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                id="add-collection"
+              >Add to Collection</button>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                id="add-wishlist"
+              >Add to Wish List</button>
             </div>
           {{/if}}
         </div>
