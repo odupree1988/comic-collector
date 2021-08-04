@@ -17,7 +17,6 @@
           style="font-size: 1.2rem;"
         >
           <div class="border-top border-bottom">
-
             <h5 class="mt-0">Center-aligned media</h5>
             <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
               scelerisque ante sollicitudin. Cras purus odio, vestibulum in
@@ -37,7 +36,6 @@
     </div>
   </div>
 </div>
-
 <div class="card-deck mt-4">
   <div class="card">
     <img class="card-img-top" src="..." alt="Card image cap" />
@@ -71,7 +69,8 @@
 </div> }}
 
 {{#each comics}}
-  <div id="btn{{id}}" onclick="getId(this)">{{title}}</div>
+  <div id="btn{{id}}" onclick="getId(this)"><p>{{comic}}</p><p>{{title}}</p><p
+    >{{description}}</p><p>{{price}}</p></div>
 {{/each}}
 
 <script src="/javascript/test.js"></script>

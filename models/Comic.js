@@ -18,8 +18,8 @@ Comic.init(
     },
     title: {
       type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
+      allowNull: true,
+      // unique: true,
     },
     description: {
       type: DataTypes.STRING,

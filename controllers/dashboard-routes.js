@@ -16,7 +16,7 @@ router.get("/", (req, res) => {
     ],
   }).then((dbComicData) => {
     const comics = dbComicData.map((comics) => comics.get({ plain: true }));
-    console.log(comics)
+    console.log(comics);
     res.render("collection", {
       comics,
       homepage: true,
