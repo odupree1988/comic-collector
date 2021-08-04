@@ -91,11 +91,11 @@
         background-size: cover; 
         background-position: center;"
     >
-      {{!-- <div class="media">
+      <div class="media">
         <img
           id="comicImg"
           class="align-self-center mr-3"
-          {{!-- src="IMG/sidebar-placeholder.png" --}}
+          {{! src="IMG/sidebar-placeholder.png" }}
           alt="Generic placeholder image"
           id="comic-image"
         />
@@ -109,14 +109,14 @@
             <ul>
               <li id="priceElem"></li>
               <li>
-                <a id="urlElem" href=""></a>
+                <a id="urlElem" href="" target="_blank"></a>
               </li>
             </ul>
           </div>
           <div class="border-top border-bottom">
             <ul class="mb-0">
               <li id="descElem">
-              
+
               </li>
             </ul>
           </div>
@@ -138,7 +138,7 @@
       </div>
     </div>
   </div>
-</div> --}}
+</div>
 
 <div class="container mt-3 add-collection">
   <div class="row">
@@ -151,9 +151,8 @@
       <div class="media">
         <img
           class="align-self-center mr-3"
-          {{!-- src="IMG/sidebar-placeholder.png" --}}
+          {{! src="IMG/sidebar-placeholder.png" }}
           alt="Generic placeholder image"
-          
         />
         <div
           class="media-body align-self-center font-weight-light"
@@ -163,7 +162,7 @@
 
             <h5 class="mt-0" id="comic-image">Superman Volume 12</h5>
             <p id="comic-title">Crass</p>
-              <p id="comic-description">Cras sit.</p>
+            <p id="comic-description">Cras sit.</p>
           </div>
 
           <div class="border-top border-bottom">
@@ -184,7 +183,7 @@
   </div>
 </div>
 
-  <script src="/javascript/collection.js"></script>
+<script src="/javascript/collection.js"></script>
 {{#unless loggedIn}}
   <script src="/javascript/signup.js"></script>
 {{/unless}}
