@@ -44,7 +44,7 @@ let urldata = data.data.results[0].urls[0].url
 urldata= urldata.split("?")[0]
 console.log(urldata)
 url.href =urldata
-urldata.innerText="Digital Comic"
+url.innerText="Digital Comic"
 
 }
 // data.results[0].prices[0]
