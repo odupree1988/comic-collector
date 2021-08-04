@@ -11,16 +11,34 @@ Comic.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    super_hero: {
+    comic: {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
     },
-    book_name: {
+    title: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      // unique: true,
+    },
+    description: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
     },
+    price: {
+      type: DataTypes.DECIMAL,
+      allowNull: false,
+      validate: {
+        isDecimal: true,
+      },
+    },
+    // comic_url: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    //   validate: {
+    //     isUrl: true,
+    //   },
+    // },
     user_id: {
       type: DataTypes.INTEGER,
       references: {

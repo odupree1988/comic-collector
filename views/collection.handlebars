@@ -1,6 +1,4 @@
-
-
-<div class="container mt-3">
+{{! <div class="container mt-3">
   <div class="row">
     <div
       class="col-sm col-md col-lg col-xl col-xxl border-top border-right border-bottom pl-0"
@@ -19,7 +17,6 @@
           style="font-size: 1.2rem;"
         >
           <div class="border-top border-bottom">
-
             <h5 class="mt-0">Center-aligned media</h5>
             <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
               scelerisque ante sollicitudin. Cras purus odio, vestibulum in
@@ -32,14 +29,13 @@
               dis parturient montes, nascetur ridiculus mus.</p>
           </div>
           <div class="col text-center mt-4">
-            <button type="submit" class="btn btn-primary">Remove From Collection</button>          
+            <button type="submit" class="btn btn-primary">Remove From Collection</button>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
 <div class="card-deck mt-4">
   <div class="card">
     <img class="card-img-top" src="..." alt="Card image cap" />
@@ -70,4 +66,11 @@
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
   </div>
-</div>
+</div> }}
+
+{{#each comics}}
+  <div id="btn{{id}}" onclick="getId(this)"><p>{{comic}}</p><p>{{title}}</p><p
+    >{{description}}</p><p>{{price}}</p></div>
+{{/each}}
+
+<script src="/javascript/test.js"></script>

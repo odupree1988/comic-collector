@@ -31,9 +31,12 @@ router.get("/:id", (req, res) => {
 
 router.post("/", (req, res) => {
   Comic.create({
-    super_hero: req.body.super_hero,
-    book_name: req.body.book_name,
-    user_id: req.session.user_id,
+    comic: req.body.comic,
+    title: req.body.title,
+    description: req.body.description,
+    price: req.body.price,
+    url: req.body.url,
+    user_id: req.body.user_id,
   })
     .then((dbComicData) => res.json(dbComicData))
     .catch((err) => {
