@@ -140,12 +140,11 @@ function renderImg(data) {
     wishBtnEl.className = "btn btn-primary ml-1 add-wishlist";
     wishBtnEl.innerText = "Add to Wish List";
     btnContainerEl.appendChild(wishBtnEl);
-
-    // let collectionEl = document.createElement("script");
-    // collectionEl.setAttribute("src", "/javascript/collection.js");
-    // body.appendChild(collectionEl);
   }
 
+  let collectionEl = document.createElement("script");
+  collectionEl.setAttribute("src", "/javascript/collection.js");
+  body.appendChild(collectionEl);
   // comicData.push(imagesArr,titleArr,priceArr,urlArr,descArr)
   // console.log(comicData[0])
   // console.log(comicData[1])
