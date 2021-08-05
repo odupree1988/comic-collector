@@ -3,10 +3,27 @@ const sequelize = require("../config/connection");
 const { User, Comic } = require("../models");
 
 router.get("/", (req, res) => {
-  res.render("collection", {
-    homepage: true,
-    search: true,
-    loggedIn: req.session.loggedIn,
+  Comic.findAll({
+    where: {
+      user_id: req.session.user_id,
+    },
+    attributes: ["id", "title", "description", "price", "comic_url"],
+    include: [
+      {
+        model: User,
+        attributes: ["username"],
+      },
+    ],
+  }).then((dbComicData) => {
+    console.log(dbComicData);
+    const comics = dbComicData.map((comics) => comics.get({ plain: true }));
+    console.log(comics);
+    res.render("collection", {
+      comics,
+      homepage: true,
+      search: true,
+      loggedIn: true,
+    });
   });
 });
 
