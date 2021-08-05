@@ -83,44 +83,7 @@
   </div>
 </div>
 
-<div class="container mt-3">
-  <div class="row">
-    <div
-      class="col-sm col-md col-lg col-xl col-xxl border-top border-right border-bottom pl-0"
-      style="background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 50%,rgba(255,255,255,0.9) 150%), url(IMG/wham.jpg); 
-        background-size: cover; 
-        background-position: center;"
-    >
-      <div class="media">
-        <img
-          id="comicImg"
-          class="align-self-center mr-3"
-          {{! src="IMG/sidebar-placeholder.png" }}
-          alt="Generic placeholder image"
-          id="comic-image"
-        />
-        <div
-          class="media-body align-self-center font-weight-light"
-          style="font-size: 1.2rem;"
-        >
-          <div class="border-top border-bottom">
-
-            <h5 id="titleElem" class="mt-0"></h5>
-            <ul>
-              <li id="priceElem"></li>
-              <li>
-                <a id="urlElem" href="" target="_blank"></a>
-              </li>
-            </ul>
-          </div>
-          <div class="border-top border-bottom">
-            <ul class="mb-0">
-              <li id="descElem">
-
-              </li>
-            </ul>
-          </div>
-          {{#if loggedIn}}
+          {{!-- {{#if loggedIn}}
             <div class="col text-center mt-4">
               <button
                 type="submit"
@@ -133,14 +96,14 @@
                 id="add-wishlist"
               >Add to Wish List</button>
             </div>
-          {{/if}}
+          {{/if}} --}}
         </div>
       </div>
-    </div>
   </div>
 </div>
 
-<div class="container mt-3 add-collection">
+
+{{!-- <div class="container mt-3 add-collection">
   <div class="row">
     <div
       class="col-sm col-md col-lg col-xl col-xxl pl-0"
@@ -157,10 +120,10 @@
         <div
           class="media-body align-self-center font-weight-light"
           style="font-size: 1.2rem;"
-        >
-          <div class="border-top border-bottom">
+        > --}}
+          {{!-- <div class="border-top border-bottom"> --}}
 
-            <h5 class="mt-0" id="comic-image">Superman Volume 12</h5>
+            {{!-- <h5 class="mt-0" id="comic-image">Superman Volume 12</h5>
             <p id="comic-title">Crass</p>
             <p id="comic-description">Cras sit.</p>
           </div>
@@ -170,13 +133,13 @@
           </div>
           <div class="border-top border-bottom">
             <p class="mb-0" id="comic-url">www.website.com</p>
-          </div>
-          {{#if loggedIn}}
+          </div> --}}
+          {{!-- {{#if loggedIn}}
             <div class="col text-center mt-4">
               <button type="submit" class="btn btn-primary">Add to Collection</button>
               <button type="submit" class="btn btn-primary">Add to Wish List</button>
             </div>
-          {{/if}}
+          {{/if}} --}}
         </div>
       </div>
     </div>
@@ -187,7 +150,7 @@
   <div>{{title}}</div>
 {{/each}}
 
-<script src="/javascript/collection.js"></script>
+
 <script src="/javascript/collection.js"></script>
 {{#unless loggedIn}}
   <script src="/javascript/signup.js"></script>

@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const hbs = require("express-handlebars").create();
 const { User, Comic } = require("../../models");
 
 router.get("/", (req, res) => {
@@ -35,7 +36,7 @@ router.post("/", (req, res) => {
     title: req.body.title,
     description: req.body.description,
     price: req.body.price,
-    url: req.body.url,
+    comic_url: req.body.comic_url,
     user_id: req.body.user_id,
   })
     .then((dbComicData) => res.json(dbComicData))
@@ -81,13 +82,28 @@ router.delete("/:id", (req, res) => {
         res.status(404).json({ message: "No comic exists with this id!" });
         return;
       }
-      const selectedComic = dbComicData.map((post) => post.get({ plain: true }));
-      res.render('collection, wishlist', )
+      const selectedComic = dbComicData.map((post) =>
+        post.get({ plain: true })
+      );
+      res.render("collection, wishlist");
     })
     .catch((err) => {
       console.log(err);
       res.status(500).json(err);
     });
+});
+
+router.post("/generateCards", (req, res) => {
+  hbs
+    .render("views/partials/comic-card.handlebars", req.body)
+    .then((html) => {
+      res.send(html);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+  //   res.render("partials/comic-card", req.body);
 });
 
 module.exports = router;
