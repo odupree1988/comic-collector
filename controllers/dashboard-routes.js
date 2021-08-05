@@ -7,7 +7,7 @@ router.get("/", (req, res) => {
     where: {
       user_id: req.session.user_id,
     },
-    attributes: ["id", "comic", "title", "description", "price"],
+    attributes: ["id", "title", "description", "price", "comic_url"],
     include: [
       {
         model: User,
@@ -15,22 +15,15 @@ router.get("/", (req, res) => {
       },
     ],
   }).then((dbComicData) => {
-    if (!dbComicData) {
-      res.render("collection", {
-        homepage: true,
-        search: true,
-        loggedIn: true,
-      });
-    } else {
-      const comics = dbComicData.map((comics) => comics.get({ plain: true }));
-      console.log(comics);
-      res.render("collection", {
-        comics,
-        homepage: true,
-        search: true,
-        loggedIn: true,
-      });
-    }
+    console.log(dbComicData);
+    const comics = dbComicData.map((comics) => comics.get({ plain: true }));
+    console.log(comics);
+    res.render("collection", {
+      comics,
+      homepage: true,
+      search: true,
+      loggedIn: true,
+    });
   });
 });
 

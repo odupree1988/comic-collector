@@ -29,15 +29,21 @@ srchbtn.addEventListener("click", function (event) {
 });
 
 function renderImg(data) {
-  console.log(data);
-  fetch("/api/comics/generateCards", {
-    method: "post",
-    body: JSON.stringify(data),
-    headers: { "Content-Type": "application/json" },
-  }).then((data) => console.log);
+  // console.log(data);
+  // fetch("/api/comics/generateCards", {
+  //   method: "post",
+  //   body: JSON.stringify(data),
+  //   headers: { "Content-Type": "application/json" },
+  // })
+  //   .then((res) => res.text())
+  //   .then((data) => {
+  //     console.log(data);
+  //     document.body.innerHTML = data;
+  //   });
+
   for (let i = 0; i < data.data.results.length; i++) {
     let container = document.createElement("div");
-    container.className = "container mt-3 add-collection";
+    container.className = "container mt-3";
     body.appendChild(container);
 
     let row = document.createElement("div");
