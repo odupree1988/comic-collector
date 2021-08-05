@@ -27,7 +27,7 @@ console.log(data)
 let image= document.getElementById("comicImg")
 image.src = data.data.results[0].images[0].path
 console.log(data.data.results[0].images[0].path)
-
+  
  let price = document.getElementById("priceElem")
 price.innerText = `Price:${data.data.results[0].prices[0].price}`
 console.log(data.data.results[0].prices[0].price)
