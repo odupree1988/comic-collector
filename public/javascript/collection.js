@@ -1,17 +1,20 @@
 async function collectionButtonHandler(event) {
   event.preventDefault();
 
-  const comic = document.getElementById("comicImage")
-  // comic.attributes[0].name
+  event.target;
+  console.log(event.target);
+
+  const comic = document.querySelector("#comicImage").src;
   const title = document.querySelector("#comicTitle").innerHTML;
   const description = document.querySelector("#comicDescription").innerHTML;
   const price = document.querySelector("#comicPrice").innerHTML;
-  const url = document.querySelector("#comicUrl").innerHTML;
+  const comic_url = document.querySelector("#comicUrl").innerHTML;
 
-  console.log(comic);
+  // console.log(img.src.value);
   console.log(title);
   console.log(description);
   console.log(price);
+  console.log(comic_url);
 
   //   if (username && email && password) {
   const response = await fetch("/api/comics", {
@@ -21,7 +24,7 @@ async function collectionButtonHandler(event) {
       title,
       description,
       price,
-      url,
+      comic_url,
     }),
     headers: { "Content-Type": "application/json" },
   });
@@ -37,7 +40,7 @@ async function collectionButtonHandler(event) {
     alert(response.statusText);
   }
 }
-// }
 
-document.querySelector("#addCollection")
-.addEventListener("click", collectionButtonHandler);
+document
+  .querySelector(".add-collection")
+  .addEventListener("click", collectionButtonHandler);
