@@ -121,7 +121,9 @@ function renderImg(data) {
     listContainer.appendChild(btnContainerEl);
     let containerBtnEl = document.createElement("button");
     containerBtnEl.setAttribute("type", "submit");
-    containerBtnEl.setAttribute("id", "addCollection");
+
+    containerBtnEl.setAttribute("id","addCollection")
+
     containerBtnEl.className = "btn btn-primary mr-1 add-collection";
     containerBtnEl.innerText = "Add to Collection";
     btnContainerEl.appendChild(containerBtnEl);
@@ -137,7 +139,14 @@ function renderImg(data) {
   // comicData.push(imagesArr,titleArr,priceArr,urlArr,descArr)
   // console.log(comicData[0])
   // console.log(comicData[1])
-  const comic = document.getElementById("comicImage");
-  comic.attributes[0].name;
-  console.log(comic);
+
+}
+
+// data.results[0].prices[0]
+// data.results[0].thumbnail.path
+// data.results[0].urls[0]
+// data.results[0].title
+// data.results[1].description
+
+
 }

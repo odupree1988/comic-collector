@@ -9,5 +9,6 @@ comicSrch.addEventListener("click", function (event) {
     fetch(`/api/comicName?comic=${comicName}`)
       .then((res) => res.json())
       .then((data) => console.log(data));
+
   }
 });
