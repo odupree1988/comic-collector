@@ -1,11 +1,11 @@
 async function collectionButtonHandler(event) {
   event.preventDefault();
 
-  const comic = document.getElementById("comic-image").innerHTML;
-  const title = document.querySelector("#comic-title").innerHTML;
-  const description = document.querySelector("#comic-description").innerHTML;
-  const price = document.querySelector("#comic-price").innerHTML;
-  //   const url = document.querySelector("#comic-url").innerHTML;
+  const comic = document.getElementById("comicImage").innerHTML;
+  const title = document.querySelector("#comicTitle").innerHTML;
+  const description = document.querySelector("#comicDescription").innerHTML;
+  const price = document.querySelector("#comicPrice").innerHTML;
+  //   const url = document.querySelector("#comicUrl").innerHTML;
 
   console.log(comic);
   console.log(title);
@@ -39,4 +39,4 @@ async function collectionButtonHandler(event) {
 
 document
   .querySelector(".add-collection")
-  .addEventListener("click", collectionButtonHandler);
+  // .addEventListener("click", collectionButtonHandler);
