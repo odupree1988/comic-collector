@@ -13,7 +13,7 @@ Comic.init(
     },
     comic: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       unique: true,
     },
     title: {
@@ -26,19 +26,16 @@ Comic.init(
       allowNull: false,
     },
     price: {
-      type: DataTypes.DECIMAL,
+      type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        isDecimal: true,
-      },
+      // validate: {
+      //   isDecimal: true,
+      // },
     },
-    // comic_url: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    //   validate: {
-    //     isUrl: true,
-    //   },
-    // },
+    comic_url: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
