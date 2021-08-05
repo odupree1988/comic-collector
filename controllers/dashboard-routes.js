@@ -15,14 +15,22 @@ router.get("/", (req, res) => {
       },
     ],
   }).then((dbComicData) => {
-    const comics = dbComicData.map((comics) => comics.get({ plain: true }));
-    console.log(comics);
-    res.render("collection", {
-      comics,
-      homepage: true,
-      search: true,
-      loggedIn: true,
-    });
+    if (!dbComicData) {
+      res.render("collection", {
+        homepage: true,
+        search: true,
+        loggedIn: true,
+      });
+    } else {
+      const comics = dbComicData.map((comics) => comics.get({ plain: true }));
+      console.log(comics);
+      res.render("collection", {
+        comics,
+        homepage: true,
+        search: true,
+        loggedIn: true,
+      });
+    }
   });
 });
 

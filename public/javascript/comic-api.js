@@ -8,7 +8,7 @@ comicSrch.addEventListener("click", function (event) {
     let comicName = comicInput.value;
   comicName = comicName.replace(/\s+/g,"-")
   console.log(comicName);
-  fetch(`http://localhost:3001/api/comicName?comic=${comicName}`)
+  fetch(`/api/comicName?comic=${comicName}`)
     .then((res) => res.json())
     .then((data) => console.log(data));
   }

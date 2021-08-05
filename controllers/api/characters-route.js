@@ -10,19 +10,18 @@ const { MARVEL_PRIVATE, MARVEL_PUBLIC } = process.env;
 
 router.get("/", (req, res) => {
   const { character } = req.query;
-console.log(character)
+  // console.log(character);
   let ts = crypto.randomBytes(20).toString("hex");
   let hash = md5(`${ts}${MARVEL_PRIVATE}${MARVEL_PUBLIC}`);
   const auth = `ts=${ts}&hash=${hash}&apikey=${MARVEL_PUBLIC}`;
-
   axios
     .get(`${char_URL}${auth}&nameStartsWith=${character}`)
     .then(({ data }) => {
       // console.log(JSON.stringify(data, null, 2))
       let charId = data.data.results[0].id;
-    //   if(charId===null){
-    //     //   return res.json("please eneter character name differently or character doesn't exist")
-    //   }
+      //   if(charId===null){
+      //     //   return res.json("please eneter character name differently or character doesn't exist")
+      //   }
       axios
         .get(`${comic_URL}${auth}&characters=${charId}`)
         .then(({ data }) => {
@@ -33,6 +32,40 @@ console.log(character)
     })
     .catch((error) => console.log(error));
 });
-
-
+// router.get("./", (req, res) => {
+//   // console.log(parsedData)
+//   for (let i = 0; i < parsedData.data.results.length; i++) {
+//     let imageData = parsedData.data.results[i].images[0].path;
+//     let s = "s";
+//     var position = 4;
+//     imageData = [
+//       imageData.slice(0, position),
+//       s,
+//       imageData.slice(position),
+//     ].join("");
+//     imageData = imageData + "/clean.jpg";
+//     imagesArr.push(imageData);
+//     let priceData = parsedData.data.results[i].prices[0].price;
+//     // console.log(parsedData.data.results[i].prices[0].price);
+//     priceArr.push(priceData);
+//     let titleData = parsedData.data.results[i].title;
+//     titleArr.push(titleData);
+//     // console.log(parsedData.data.results[i].title);
+//     let descData = parsedData.data.results[i].description;
+//     descArr.push(descData);
+//     let urlData = parsedData.data.results[i].urls[0].url;
+//     urlData = urlData.split("?")[0];
+//     // console.log(urlData);
+//     // urlArr.push(urlData);
+//   }
+//   // comicData.push(imagesArr, titleArr, priceArr, urlArr, descArr);
+//   // console.log(imagesArr);
+//   // console.log(titleArr);
+//   // console.log(priceArr);
+//   // console.log(urlArr);
+//   // console.log(descArr);
+//   // console.log(comicData);
+//   // res.render("homepage", comicData);
+//   res.json({message: 'success!'})
+// });
 module.exports = router;

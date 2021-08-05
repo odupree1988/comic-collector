@@ -1,5 +1,4 @@
 async function getId(btn) {
-  
   const id = btn.id.split("btn")[1];
   console.log(id);
 

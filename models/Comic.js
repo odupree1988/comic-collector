@@ -32,13 +32,10 @@ Comic.init(
         isDecimal: true,
       },
     },
-    // comic_url: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    //   validate: {
-    //     isUrl: true,
-    //   },
-    // },
+    comic_url: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {

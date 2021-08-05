@@ -1,11 +1,12 @@
 async function collectionButtonHandler(event) {
   event.preventDefault();
 
-  const comic = document.getElementById("comicImage").innerHTML;
+  const comic = document.getElementById("comicImage")
+  // comic.attributes[0].name
   const title = document.querySelector("#comicTitle").innerHTML;
   const description = document.querySelector("#comicDescription").innerHTML;
   const price = document.querySelector("#comicPrice").innerHTML;
-  //   const url = document.querySelector("#comicUrl").innerHTML;
+  const url = document.querySelector("#comicUrl").innerHTML;
 
   console.log(comic);
   console.log(title);
@@ -16,14 +17,15 @@ async function collectionButtonHandler(event) {
   const response = await fetch("/api/comics", {
     method: "post",
     body: JSON.stringify({
-      comic,
+      // comic,
       title,
       description,
       price,
+      url,
     }),
     headers: { "Content-Type": "application/json" },
   });
-  console.log(comic);
+  // console.log(comic);
   console.log(title);
   console.log(description);
   console.log(price);
@@ -37,6 +39,5 @@ async function collectionButtonHandler(event) {
 }
 // }
 
-document
-  .querySelector(".add-collection")
-  // .addEventListener("click", collectionButtonHandler);
+document.querySelector("#addCollection")
+.addEventListener("click", collectionButtonHandler);
