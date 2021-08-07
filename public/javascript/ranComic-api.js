@@ -14,4 +14,7 @@ function getComic(data){
     ].join("");
     imageData = imageData + "/clean.jpg";
     dailyComicImg.src = imageData;
+    let urlData = data.data.results[0].urls[0].url;
+    urlData = urlData.split("?")[0];
+    dailyComicImg.href =urlData
 }
