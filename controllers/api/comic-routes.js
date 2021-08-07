@@ -46,30 +46,30 @@ router.post("/", (req, res) => {
     });
 });
 
-router.put("/:id", (req, res) => {
-  Comic.update(
-    {
-      super_hero: req.body.super_hero,
-      book_name: req.body.book_name,
-    },
-    {
-      where: {
-        id: req.params.id,
-      },
-    }
-  )
-    .then((dbComicData) => {
-      if (!dbComicData) {
-        res.status(404).json({ message: "No comic exists with this id!" });
-        return;
-      }
-      res.json(dbComicData);
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-});
+// router.put("/:id", (req, res) => {
+//   Comic.update(
+//     {
+//       super_hero: req.body.super_hero,
+//       book_name: req.body.book_name,
+//     },
+//     {
+//       where: {
+//         id: req.params.id,
+//       },
+//     }
+//   )
+//     .then((dbComicData) => {
+//       if (!dbComicData) {
+//         res.status(404).json({ message: "No comic exists with this id!" });
+//         return;
+//       }
+//       res.json(dbComicData);
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//       res.status(500).json(err);
+//     });
+// });
 
 router.delete("/:id", (req, res) => {
   Comic.destroy({
@@ -95,7 +95,7 @@ router.delete("/:id", (req, res) => {
 
 router.post("/generateCards", (req, res) => {
   hbs
-    .render("views/partials/comic-card.handlebars", req.body)
+    .render("views/partials/comic-card", req.body)
     .then((html) => {
       res.send(html);
     })

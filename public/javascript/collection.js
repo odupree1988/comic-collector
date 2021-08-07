@@ -41,6 +41,6 @@ async function collectionButtonHandler(event) {
   }
 }
 
-document
-  .querySelector(".add-collection")
-  .addEventListener("click", collectionButtonHandler);
+// document
+//   .querySelector(".add-collection")
+//   .addEventListener("click", collectionButtonHandler);

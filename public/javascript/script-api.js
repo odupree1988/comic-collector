@@ -149,4 +149,3 @@ function renderImg(data) {
 // data.results[1].description
 
 
-}

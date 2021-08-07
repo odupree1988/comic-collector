@@ -15,7 +15,7 @@ router.get("/", (req, res) => {
   axios
   .get(`${comic_URL}${auth}&titleStartsWith=${comic}`)
   .then(({ data }) => {
-    // console.log(JSON.stringify(data, null, 2))
+    console.log(JSON.stringify(data, null, 2))
 
     return res.json(data);
   })
