@@ -27,7 +27,7 @@ srchbtn.addEventListener("click", function (event) {
   }
 });
 function renderImg(data) {
-  // console.log(data);
+  console.log(data);
   // fetch("/api/comics/generateCards", {
   //   method: "post",
   //   body: JSON.stringify(data),
@@ -149,4 +149,4 @@ function renderImg(data) {
 // data.results[1].description
 
 
-}
+
