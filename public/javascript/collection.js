@@ -1,10 +1,12 @@
-async function collectionButtonHandler(event) {
-  event.preventDefault();
+async function collectionButtonHandler(btn, event) {
+  // event.preventDefault();
+  const id = btn.id.split("btn")[1];
+  console.log(id);
 
-  event.target;
-  console.log(event.target);
+  // event.target;
+  // console.log(event.target);
 
-  const comic = document.querySelector("#comicImage").src;
+  // const comic = document.querySelector("#comicImage").src;
   const title = document.querySelector("#comicTitle").innerHTML;
   const description = document.querySelector("#comicDescription").innerHTML;
   const price = document.querySelector("#comicPrice").innerHTML;
@@ -42,5 +44,5 @@ async function collectionButtonHandler(event) {
 }
 
 document
-  .querySelector(".add-collection")
+  .querySelector(".searchedComic")
   .addEventListener("click", collectionButtonHandler);

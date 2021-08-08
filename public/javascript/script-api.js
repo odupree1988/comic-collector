@@ -35,8 +35,8 @@ function renderImg(data) {
   })
     .then((res) => res.text())
     .then((data) => {
-      console.log(data);
-      // document.body.innerHTML = data;
+      // console.log(data);
+      document.body.innerHTML = data;
     });
   // for (let i = 0; i < data.data.results.length; i++) {
   //   let container = document.createElement("div");

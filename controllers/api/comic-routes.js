@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const hbs = require("express-handlebars").create();
+// const hbs = require("express-handlebars").create();
 const { User, Comic } = require("../../models");
 
 router.get("/", (req, res) => {
@@ -94,16 +94,16 @@ router.delete("/:id", (req, res) => {
 });
 
 router.post("/generateCards", (req, res) => {
-  hbs
-    .render("views/partials/comic-card.handlebars", req.body)
-    .then((html) => {
-      res.send(html);
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-  //   res.render("partials/comic-card", req.body);
+  // hbs
+  //   .render("views/homepage.handlebars", req.body)
+  //   .then((html) => {
+  //     res.send(html);
+  //   })
+  //   .catch((err) => {
+  //     console.log(err);
+  //     res.status(500).json(err);
+  //   });
+  res.render("homepage", req.body);
 });
 
 module.exports = router;
