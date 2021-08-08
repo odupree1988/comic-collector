@@ -22,7 +22,10 @@
   background-size: cover;
   background-position: center;
 }
-
+#dailyComic{
+  height: 300px;
+  width: 200px;
+}
 /* #liCon{
   font-size: 1.2rem;
   border-top: 1px black;

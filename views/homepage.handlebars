@@ -32,10 +32,12 @@
           <h2 class="text-center">Check out the comic of the day!</h2>
           <div class="col text-center">
             <img
+              id="dailyComic"
               class="align-center"
-              src="IMG/sidebar-placeholder.png"
+              {{!-- src="IMG/sidebar-placeholder.png" --}}
               alt="generic placeholder image"
             />
+            <script src="/javascript/ranComic-api.js"></script>
           </div>
         {{else}}
           <h2 class="text-center">Sign up today!</h2>
