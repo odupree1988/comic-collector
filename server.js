@@ -21,6 +21,25 @@ const sess = {
   }),
 };
 
+exphbs.registerHelper("fixImg",function(data){
+  let imageData = data.data.results[0].images[0].path;
+  let s = "s";
+  var position = 4;
+  imageData = [
+  imageData.slice(0, position),
+  s,
+  imageData.slice(position),
+  ].join("");
+  imageData = imageData + "/clean.jpg";
+  return imageData
+})
+exphbs.registerHelper("fixUrl",function(data){
+  let urlData = data.data.results[0].urls[0].url;
+  urlData = urlData.split("?")[0];
+})
+
+
+
 app.use(session(sess));
 
 // const helpers = require('./utils/helpers');
