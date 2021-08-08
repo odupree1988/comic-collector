@@ -104,6 +104,8 @@
   </div>
 </div>
 
+{{> comic data.results}}
+
 
 {{!-- <div class="container mt-3 add-collection">
   <div class="row">
@@ -148,11 +150,11 @@
   </div>
 </div>
 
-{{#each comicData}}
+{{!-- {{#each comicData}}
   <div>{{title}}</div>
-{{/each}}
+{{/each}} --}}
 
-
+<script src="/javascript/test.js"></script>
 <script src="/javascript/collection.js"></script>
 {{#unless loggedIn}}
   <script src="/javascript/signup.js"></script>
