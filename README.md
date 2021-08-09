@@ -4,28 +4,21 @@
 
 ## Description
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+A website designed to search for comics by hero or comic name, and save them to your user profile.
 
 ---
 
 ## Table of Contents
 
-- [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
 - [Questions](#questions)
 
 ---
 
-## Installation
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
----
-
 ## Usage
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Once on the website, create a new user profile in order to save any comics to your collection. You can click on the digitial comic link to puchase the comic digitally.
 
 ![](public/IMG/comic-collector001.png)
 
@@ -53,10 +46,10 @@ copies or substantial portions of the Software.
 
 For any questions please contact me directly.
 
-Email: <odupree1988@gmail.com>
+Email: <odupree1988@gmail.com>, <salas.lorenzo4@gmail.com>
 
-GitHub: [odupree1988](https://github.com/odupree1988)
+GitHub: [odupree1988](https://github.com/odupree1988), [Salas4969](https://github.com/Salas4969)
 
-Made By Owen Dupree 2021
+Made By Owen Dupree & Lorenzo Salas 2021
 
 ---
