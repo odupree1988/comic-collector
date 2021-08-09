@@ -1,6 +1,6 @@
 <div class="searchedComic">
   {{#each this}}
-    <div class="container mt-3 add-collection">
+    <div class="container mt-3 add-collection" id="{{id}}">
       <div class="row">
         <div
           class="col-sm col-md col-lg col-xl col-xxl pl-0"
@@ -10,28 +10,37 @@
         >
           <div class="media">
             <img
-              class="align-self-center mr-3"
-              src="IMG/sidebar-placeholder.png"
+              class="align-self-center mr-3 "
+              style="height: 300px; width: 200px;"
+              {{#each images}}
+              src="{{fixImg path}}"
+              {{/each}}
               alt="Generic placeholder image"
             />
             <div
               class="media-body align-self-center font-weight-light"
               style="font-size: 1.2rem;"
             >
-              <div class="border-top border-bottom">
+              <div >
 
                 <h5 class="mt-0" id="comicImage">test</h5>
-                <p id="comicTitle">{{title}}</p>
-                <p id="comicDescription">{{description}}</p>
+                <h5 class="border-bottom" id="comicTitle{{id}}">{{title}}</h5>   
+                
+                <p class="border-bottom" id="comicDescription{{id}}">{{fixDesc description}}</p>
+                
+                
+                
               </div>
 
-              <div class="border-top border-bottom">
-                {{#each prices}}
-                  <p class="mb-0" id="comicPrice">{{price}}</p>
-                {{/each}}
+              <div class="border-bottom">
+                
+                  <p class="mb-0" id="comicPrice{{id}}">${{prices.0.price}}</p>
+                
               </div>
-              <div class="border-top border-bottom">
-                <p class="mb-0" id="comicUrl">www.website.com</p>
+              <div class="border-top ">
+                
+                <a class="mb-0" id="comicUrl{{id}}" href="{{fixUrl urls.0.url}}" target="_blank">Digital Comic</a>
+                
               </div>
               {{!-- {{#if loggedIn}} --}}
               <div class="col text-center mt-4">
@@ -39,9 +48,13 @@
                   type="submit"
                   class="btn btn-primary"
                   id="btn{{id}}"
-                  onclick="collectionButtonHandler(this)"
+                  onclick="collectionButtonHandler(this, event)"
                 >Add to Collection</button>
-                <button type="submit" class="btn btn-primary">Add to Wish List</button>
+                <button 
+                type="submit" 
+                class="btn btn-primary" 
+                id="btn{{id}}"
+                onclick="wishListButtonHandler(this, event)">Add to Wish List</button>
               </div>
               {{!-- {{/if}} --}}
             </div>
@@ -51,6 +64,8 @@
     </div>
   {{/each}}
 </div>
+
+
 {{!-- <div class="container mt-3 add-collection">
   <div class="row">
     <div

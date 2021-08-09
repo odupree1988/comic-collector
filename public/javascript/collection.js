@@ -1,16 +1,19 @@
 async function collectionButtonHandler(btn, event) {
-  // event.preventDefault();
+  event.preventDefault();
   const id = btn.id.split("btn")[1];
-  console.log(id);
+  // console.log(id);
+  console.log(event.target);
 
   // event.target;
   // console.log(event.target);
 
   // const comic = document.querySelector("#comicImage").src;
-  const title = document.querySelector("#comicTitle").innerHTML;
-  const description = document.querySelector("#comicDescription").innerHTML;
-  const price = document.querySelector("#comicPrice").innerHTML;
-  const comic_url = document.querySelector("#comicUrl").innerHTML;
+  const title = document.querySelector(`#comicTitle${id}`).innerHTML;
+  const description = document.querySelector(
+    `#comicDescription${id}`
+  ).innerHTML;
+  const price = document.querySelector(`#comicPrice${id}`).innerHTML;
+  const comic_url = document.querySelector(`#comicUrl${id}`).innerHTML;
 
   // console.log(img.src.value);
   console.log(title);
@@ -19,7 +22,7 @@ async function collectionButtonHandler(btn, event) {
   console.log(comic_url);
 
   //   if (username && email && password) {
-  const response = await fetch("/api/comics", {
+  const response = await fetch(`/api/comics`, {
     method: "post",
     body: JSON.stringify({
       // comic,
@@ -45,4 +48,5 @@ async function collectionButtonHandler(btn, event) {
 
 document
   .querySelector(".searchedComic")
+  // .querySelector(`#btn${id}`)
   .addEventListener("click", collectionButtonHandler);

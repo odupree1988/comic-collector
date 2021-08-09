@@ -37,7 +37,7 @@ router.post("/", (req, res) => {
     description: req.body.description,
     price: req.body.price,
     comic_url: req.body.comic_url,
-    user_id: req.body.user_id,
+    user_id: req.session.user_id,
   })
     .then((dbComicData) => res.json(dbComicData))
     .catch((err) => {
@@ -103,7 +103,17 @@ router.post("/generateCards", (req, res) => {
   //     console.log(err);
   //     res.status(500).json(err);
   //   });
-  res.render("homepage", req.body);
+
+  //   if (req.session.loggedIn) {
+  //     res.render("homepage", req.body, {
+  //       loggedIn: true,
+  //     });
+  //   } else {
+  res.render("homepage", {
+    data: req.body,
+    loggedIn: req.session.loggedIn,
+  });
+  //   }
 });
 
 module.exports = router;
