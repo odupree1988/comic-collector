@@ -76,16 +76,7 @@ router.delete("/:id", (req, res) => {
       id: req.params.id,
     },
   })
-    .then((dbComicData) => {
-      if (!dbComicData) {
-        res.status(404).json({ message: "No comic exists with this id!" });
-        return;
-      }
-      const selectedComic = dbComicData.map((post) =>
-        post.get({ plain: true })
-      );
-      res.render("collection");
-    })
+    .then((dbComicData) => res.json(dbComicData))
     .catch((err) => {
       console.log(err);
       res.status(500).json(err);

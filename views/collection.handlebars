@@ -68,13 +68,13 @@
 <div class="justify-content-center d-flex">
 <div class="d-flex flex-wrap justify-content-around" style="width: 65rem;">
 {{#each comics}}
-<div class="card mt-5 mr-2 ml-2" onclick="deleteFormHandler(this)" id="card{{id}}"style="width: 14rem;">
+<div class="card mt-5 mr-2 ml-2" onclick="getSavedId(this)" id="card{{id}}"style="width: 14rem;">
   <img class="card-img-top" src="{{comic}}" alt="Card image cap">
   <div class="card-body text-center">
     <h5 class="card-title">{{title}}</h5>
     <p class="card-text">{{price}}</p>
     <a href="{{comic_url}}" target="_blank">Digital Comic</a>
-    {{!-- <button class="btn btn-primary delete-collection" >Remove from collection</button> --}}
+    <button class="btn btn-primary delete-collection" >Remove from collection</button>
   </div>
 </div>
 {{/each}}

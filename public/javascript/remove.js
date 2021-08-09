@@ -1,20 +1,23 @@
-// async function deleteFormHandler(btn) {
-// //   event.preventDefault();
+const getSavedId = (btn) => {
+  const id = btn.id.split("card")[1];
+  console.log(id);
+  return deleteFormHandler(event, id);
+};
 
-//   const id = btn.id.split("card")[1];
-//   console.log(id);
+async function deleteFormHandler(event, id) {
+  event.preventDefault();
 
-//   const response = await fetch(`/api/comics/${id}`, {
-//     method: "DELETE",
-//   });
+  const response = await fetch(`/api/comics/${id}`, {
+    method: "DELETE",
+  });
 
-//   if (response.ok) {
-//     console.log('success');
-//   } else {
-//     alert(response.statusText);
-//   }
-// }
+  if (response.ok) {
+    document.location.replace("/dashboard");
+  } else {
+    alert(response.statusText);
+  }
+}
 
 // document
 //   .querySelector(`.delete-collection`)
-//   .addEventListener("submit", deleteFormHandler);
+//   .addEventListener("click", deleteFormHandler);
