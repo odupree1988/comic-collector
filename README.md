@@ -6,7 +6,7 @@
 
 A website designed to search for comics by hero or comic name, and save them to your user profile.
 
-### Website to [Comic Collector](https://comic-collector-ucf.herokuapp.com/)
+## Website to [Comic Collector](https://comic-collector-ucf.herokuapp.com/)
 
 ---
 
