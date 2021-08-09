@@ -1,24 +1,24 @@
-// async function getId(btn) {
-//   const id = btn.id.split("btn")[1];
-//   console.log(id);
+async function getId(btn) {
+  const id = btn.id.split("card")[1];
+  console.log(id);
 
-  // const response = await fetch(`api/comics/${id}`, {
-  //   method: "get",
-  //   // body: JSON.stringify({
-  //   //   comic,
-  //   //   title,
-  //   //   description,
-  //   //   price,
-  //   // }),
-  //   headers: { "Content-Type": "application/json" },
-  // });
-  // if (response.ok) {
-  //   console.log("success");
-  //   // document.location.replace("/dashboard");
-  // } else {
-  //   alert(response.statusText);
-  // }
-// }
+  const response = await fetch(`api/comics/${id}`, {
+    method: "get",
+    body: JSON.stringify({
+      comic,
+      title,
+      description,
+      price,
+    }),
+    headers: { "Content-Type": "application/json" },
+  });
+  if (response.ok) {
+    console.log("success");
+    document.location.replace("/dashboard");
+  } else {
+    alert(response.statusText);
+  }
+}
 
 // const saveHandler = () => {
 //   console.log("that tickles");

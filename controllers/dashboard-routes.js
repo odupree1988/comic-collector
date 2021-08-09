@@ -7,7 +7,7 @@ router.get("/", (req, res) => {
     where: {
       user_id: req.session.user_id,
     },
-    attributes: ["id", "title", "description", "price", "comic_url"],
+    attributes: ["id", "comic", "title", "description", "price", "comic_url"],
     include: [
       {
         model: User,

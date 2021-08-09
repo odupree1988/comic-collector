@@ -32,7 +32,7 @@ router.get("/:id", (req, res) => {
 
 router.post("/", (req, res) => {
   Comic.create({
-    // comic: req.body.comic,
+    comic: req.body.comic,
     title: req.body.title,
     description: req.body.description,
     price: req.body.price,

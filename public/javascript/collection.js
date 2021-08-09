@@ -4,18 +4,18 @@ async function collectionButtonHandler(btn, event) {
   // console.log(id);
   console.log(event.target);
 
-  // event.target;
-  // console.log(event.target);
+  event.target;
+  console.log(event.target);
 
-  // const comic = document.querySelector("#comicImage").src;
+  const comic = document.getElementById(`comicImage${id}`).src;
   const title = document.querySelector(`#comicTitle${id}`).innerHTML;
   const description = document.querySelector(
     `#comicDescription${id}`
   ).innerHTML;
   const price = document.querySelector(`#comicPrice${id}`).innerHTML;
-  const comic_url = document.querySelector(`#comicUrl${id}`).innerHTML;
+  const comic_url = document.querySelector(`#comicUrl${id}`).href;
 
-  // console.log(img.src.value);
+  console.log(comic);
   console.log(title);
   console.log(description);
   console.log(price);
@@ -25,7 +25,7 @@ async function collectionButtonHandler(btn, event) {
   const response = await fetch(`/api/comics`, {
     method: "post",
     body: JSON.stringify({
-      // comic,
+      comic,
       title,
       description,
       price,

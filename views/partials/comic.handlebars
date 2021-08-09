@@ -5,28 +5,30 @@
         <div
           class="col-sm col-md col-lg col-xl col-xxl pl-0"
           style="background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 50%,rgba(255,255,255,0.9) 150%), url(IMG/wham.jpg); 
-        background-size: cover; 
+        background-size: cover; padding: 1rem; 
         background-position: center;"
         >
           <div class="media">
             <img
               class="align-self-center mr-3 "
-              style="height: 300px; width: 200px;"
+              style="height: 300px; width: 200px; "
+              id="comicImage{{id}}"
               {{#each images}}
               src="{{fixImg path}}"
               {{/each}}
               alt="Generic placeholder image"
             />
             <div
-              class="media-body align-self-center font-weight-light"
+              class="media-body align-self-center font-weight-light text-center"
               style="font-size: 1.2rem;"
             >
               <div >
 
-                <h5 class="mt-0" id="comicImage">test</h5>
+                
                 <h5 class="border-bottom" id="comicTitle{{id}}">{{title}}</h5>   
                 
-                <p class="border-bottom" id="comicDescription{{id}}">{{fixDesc description}}</p>
+                <p class="border-bottom"
+                id="comicDescription{{id}}">{{fixDesc description}}</p>
                 
                 
                 
@@ -43,16 +45,16 @@
                 
               </div>
               {{!-- {{#if loggedIn}} --}}
-              <div class="col text-center mt-4">
+              <div class="col text-center">
                 <button
                   type="submit"
-                  class="btn btn-primary"
+                  class="btn btn-primary mt-1 mb-1"
                   id="btn{{id}}"
                   onclick="collectionButtonHandler(this, event)"
                 >Add to Collection</button>
                 <button 
                 type="submit" 
-                class="btn btn-primary" 
+                class="btn btn-primary mt-1 mb-1" 
                 id="btn{{id}}"
                 onclick="wishListButtonHandler(this, event)">Add to Wish List</button>
               </div>
