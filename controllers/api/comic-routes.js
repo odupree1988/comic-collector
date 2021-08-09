@@ -1,5 +1,4 @@
 const router = require("express").Router();
-// const hbs = require("express-handlebars").create();
 const { User, Comic } = require("../../models");
 
 router.get("/", (req, res) => {
@@ -85,7 +84,7 @@ router.delete("/:id", (req, res) => {
       const selectedComic = dbComicData.map((post) =>
         post.get({ plain: true })
       );
-      res.render("collection, wishlist");
+      res.render("collection");
     })
     .catch((err) => {
       console.log(err);
